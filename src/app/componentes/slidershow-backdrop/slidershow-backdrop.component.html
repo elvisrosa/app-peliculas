@@ -1,0 +1,8 @@
+<ion-slides [options]="slidesOpts">
+    <ion-slide *ngFor="let p of peliculas">
+        <ion-card (click)="verDatalle(p.id)">
+            <img [src]="p.backdrop_path | imagen">
+            <ion-card-subtitle>{{p.title}}</ion-card-subtitle>
+        </ion-card>
+    </ion-slide>
+</ion-slides>
